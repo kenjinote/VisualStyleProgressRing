@@ -32,7 +32,7 @@ Gdiplus::Image* LoadImageFromSystemResource()
 					LargeInt.QuadPart = 0;
 					pIStream->Seek(LargeInt, STREAM_SEEK_SET, NULL);
 					pIStream->Write(lpResLock, nSize, NULL);
-					pImage = Gdiplus::Image::FromStream(pIStream);
+					pImage = Image::FromStream(pIStream);
 					pIStream->Release();
 				}
 			}
